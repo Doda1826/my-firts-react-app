@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import { createBrowserRouter } from 'react-router-dom';
+const router = createBrowserRouter( /* application routes are defined here */ );
 
 function App() {
   return (
