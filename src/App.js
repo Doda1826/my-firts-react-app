@@ -6,9 +6,9 @@ const router = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={ <Root/> }>
     <Route path='/about' element={ <About/> } />
     <Route path='/sing-up' element={ <SignUp/> } />
-    <Route path='/articles' element={ <Articles/> } />
+    <Route path='/articles/about:title' element={ <Articles/> } />
     <Route path='/categories' element={ <Categories/> } />
-    <Route path='/profile' element={ <Profile/> } />
+    <Route path='/profile/darwin' element={ <Profile/> } />
   </Route>
 )); 
 
