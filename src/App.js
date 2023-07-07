@@ -7,22 +7,22 @@ import Article from './components/Articles';
 import Categories from './components/Categories';
 import Profile from './components/Profile';
 
-const router = createBrowserRouter(createRoutesFromElements(
-  <Route path='/' element={ <Root/> }>
+/*const router = createBrowserRouter(createRoutesFromElements(
+  //<Route path='/' element={ <Root/> }>
     <Route path='about' element={ <About/> } />
     <Route path='sing-up' element={ <SignUp/> } />
     <Route path='articles/about:title' element={ <Article/> } />
     <Route path='categories' element={ <Categories/> } />
     <Route path='profile/Darwin' element={ <Profile/> } />
-  </Route>
-)); 
+  //</Route>
+));*/ 
 
 export default function App () {
-  <RouterProvider router={ router } />
+  //<RouterProvider router={ router } />
 
   return (
    <div>
-     <h1>THIS IS ABOUT</h1> 
+     <h1>THIS WED SITE IS ABOUT:</h1> 
      <ul>
       <li className='about'>{About}</li>
       <li className='sing-up'>{SignUp}</li>
