@@ -1,35 +1,39 @@
-import React from 'react'
-import About from './components/About';
-import './App.css';
-import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
-import SignUp from './components/SingUp'
-import Article from './components/Articles';
-import Categories from './components/Categories';
-import Profile from './components/Profile';
+import react from "react";
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
+/* COMPONENTS */
+import Profile from './Profile.js'
+import Categories from './components/Categories.js'
+import Articles from './components/Articles.js'
+import SingUp from './components/SingUp.js'
+import About from './components/About.js'
+import Header from "./components/header.js";
+import Author from './components/Author.js'
+import Edit from './components/Edit.js'
+import Root from './components/Root.js'
+/* COMPONENTS */
 
-/*const router = createBrowserRouter(createRoutesFromElements(
-  //<Route path='/' element={ <Root/> }>
-    <Route path='about' element={ <About/> } />
-    <Route path='sing-up' element={ <SignUp/> } />
-    <Route path='articles/about:title' element={ <Article/> } />
-    <Route path='categories' element={ <Categories/> } />
-    <Route path='profile/Darwin' element={ <Profile/> } />
-  //</Route>
-));*/ 
+const router = createBrowserRouter(createRoutesFromElements(
+  <Route path="/" element={ <Root/> }>
+    <Route path="profile" element={ <Profile/> }>
+      <Route path="edit" element={ <Edit/> }/>
+    </Route>
+    <Route path="categories" element={ <Categories/> }/>
+    <Route path="articles" element={ <Articles/> }/>
+    <Route path="articles/:title" element={ <Articles/> }/>
+    <Route path="authors/:name" element={ <Author/> }/>
+    <Route path="sing-up" element={ <SingUp/> }/>
+    <Route path="about" element={ <About/> }/>
+  </Route>
+))
 
-export default function App () {
-  //<RouterProvider router={ router } />
-
+function App() {
   return (
-   <div>
-     <h1>THIS WED SITE IS ABOUT:</h1> 
-     <ul>
-      <li className='about'>{About}</li>
-      <li className='sing-up'>{SignUp}</li>
-      <li className='articles'>{Article}</li>
-      <li className='categories'>{Categories}</li>
-      <li className='profile'>{Profile}</li>
-     </ul>
-   </div>
-  );
+      <main>
+        <RouterProvider router={router}/>
+        <div className={Header}>
+        </div>
+      </main>
+  )
 }
+
+export default App
